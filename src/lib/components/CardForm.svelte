@@ -1,5 +1,5 @@
 <script>
-  import RadioButton from "./RadioButton.svelte";
+  import RadioButton from "$lib/components/RadioButton.svelte";
   import Ticket from "$lib/services/Ticket";
 
   let first_name = "";

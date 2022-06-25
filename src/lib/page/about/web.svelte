@@ -4,6 +4,7 @@
   import Footer from "$lib/components/Footer.svelte";
 
   export let data;
+  console.log(data, 'data');
 
   const left = data.slice(0, 3);
   const right = data.slice(3, 6);
@@ -35,7 +36,21 @@
   </div>
   <div class="content">
     <div class="container">
-      <div class="channels-left">
+      {#each data as item}
+        <div class="channels">
+          <div class="card">
+            <div class="title">{item?.title}</div>
+            <span>
+              {@html item?.content}
+            </span>
+          </div>
+          <div class="icon">
+            <img src="/new/guitar.svg" alt="Component" />
+            <div class="circle-yellow" />
+          </div>
+        </div>
+      {/each}
+      <!-- <div class="channels-left">
         <div class="card">
           <div class="title">#Fakultas-Gaya-Hidup</div>
           <span>
@@ -68,7 +83,7 @@
             aspernatur aliquam ducimus.
           </span>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
@@ -148,7 +163,7 @@
         }
       }
 
-      .channels-left {
+      .channels:first-child {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         margin-bottom: 10rem;
@@ -169,6 +184,84 @@
             height: 350px;
             position: absolute;
             top: -33%;
+            right: 10%;
+          }
+        }
+      }
+
+      .channels {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        margin-bottom: 10rem;
+
+        .icon {
+          position: relative;
+
+          img {
+            width: 500px;
+            position: absolute;
+            top: 0;
+            right: 3%;
+            z-index: 9;
+          }
+
+          .circle-yellow {
+            width: 350px;
+            height: 350px;
+            position: absolute;
+            top: 2.5rem;
+            right: 10%;
+          }
+        }
+      }
+
+      .channels-left:first-child {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        margin-bottom: 10rem;
+
+        .icon {
+          position: relative;
+
+          img {
+            width: 500px;
+            position: absolute;
+            top: -55%;
+            right: 3%;
+            z-index: 9;
+          }
+
+          .circle-yellow {
+            width: 350px;
+            height: 350px;
+            position: absolute;
+            top: -33%;
+            right: 10%;
+          }
+        }
+      }
+
+      .channels-left {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        margin-bottom: 10rem;
+
+        .icon {
+          position: relative;
+
+          img {
+            width: 500px;
+            position: absolute;
+            top: 0;
+            right: 3%;
+            z-index: 9;
+          }
+
+          .circle-yellow {
+            width: 350px;
+            height: 350px;
+            position: absolute;
+            top: 2.5rem;
             right: 10%;
           }
         }

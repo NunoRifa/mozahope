@@ -7,14 +7,8 @@ $textPrimary: #ffffff;
   width: 5px;
 }
 
-::-webkit-scrollbar-track {
-  // box-shadow: inset 0 0 5px #e3e3e3;
-  border-radius: 8px;
-}
-
 ::-webkit-scrollbar-thumb {
   background: $secondColor;
-  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

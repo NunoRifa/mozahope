@@ -7,7 +7,7 @@
 <section id="ticket">
     <MediaQuery query="(max-width: 768px)" let:matches>
         {#if matches}
-        <PageError />
+            <PageError />
         {:else}
             <WebView />
         {/if}

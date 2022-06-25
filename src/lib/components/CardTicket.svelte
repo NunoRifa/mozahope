@@ -1,5 +1,5 @@
 <script>
-  import CardForm from "./CardForm.svelte";
+  import CardForm from "$lib/components/CardForm.svelte";
 </script>
 
 <div class="card-ticket">

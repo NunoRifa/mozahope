@@ -39,7 +39,6 @@
         class="form-check-input"
         type="checkbox"
         bind:value={item.slug}
-        on:click={}
         id={item?.slug}
       />
       <label class="form-check-label" for={item?.slug}>
@@ -47,23 +46,6 @@
       </label>
     </div>
   {/each}
-</div>
-
-<div class="nav">
-  <div class="top">
-    <div class="logo">
-      <img src="logonya" alt="">
-    </div>
-    <div class="join-partner">
-      <span>Join as Design</span>
-      <span>Partner with LAND</span>
-    </div>
-  </div>
-  <div class="bottom">
-    <ul>
-      <li></li>
-    </ul>
-  </div>
 </div>
 
 <style lang="scss">
